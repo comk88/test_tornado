@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" type="text/css" href="/static/my.css">
+
+
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <h1>welcom{{ tab() }}</h1>
+    <h1>uimodules-test {% module m1(123)%}</h1>
+    {{ k1 }}
+    {% for a in k2 %}
+    <h2>{{ a }}</h2>
+    {% end %}
+    {{k2[0]}}
+    {% for key,value in k3.items() %}
+        {{key}},{{value}}
+    {% end %}
+    {{k3.get('key')}}
+    <form method="post" action="/login/">
+        <input type="text" name="user">
+        <input type="submit" value="提交">
+    </form>
+
+</body>
+</html>
